@@ -36,9 +36,23 @@ const express = require('express'),
         res.render("index", {blogs: blogs});
      }
    });
-
  });
 
+// NEW
+ app.get('/blogs/new', (req,res)=>{
+   res.render("new")
+ })
+
+// CREATE
+app.post('/blogs',(req,res) => {
+  Blog.create(req.body.blog,(err, newBlog) => {
+    if (err) {
+      console.log("ERROR");
+    } else {
+      res.redirect("/blogs")
+    }
+  })
+});
 
  app.listen(port, ()=> {
    console.log("Blog Site server has started.")
