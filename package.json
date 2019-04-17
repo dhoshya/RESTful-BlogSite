@@ -1,0 +1,17 @@
+{
+  "name": "restful-demo",
+  "version": "1.0.0",
+  "description": "a sample blog site demonstrating the RESTful Web Services",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rohan Joshi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.2"
+  }
+}
