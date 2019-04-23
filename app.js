@@ -96,8 +96,18 @@ app.put("/blogs/:id", (req,res) =>{
   })
 });
 
+// DESTROY
+app.delete("/blogs/:id", (req,res) => {
+  Blog.findByIdAndRemove(req.params.id, (err) => {
+    if (err) {
+      console.log(err);
+      res.redirect("/blogs");
+    } else {
+      res.redirect("/blogs");
+    }
+  });
 
-
+});
 
 
  app.listen(port, ()=> {
